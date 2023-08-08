@@ -38,6 +38,9 @@ export default function useGetToken() {
       });
 
     firebaseMessage.onMessage((payload) => {
+      console.log('----수신 테스트----');
+      console.log(payload);
+      console.log(payload.notification);
       console.log(payload.notification.title);
       console.log(payload.notification.body);
     });
